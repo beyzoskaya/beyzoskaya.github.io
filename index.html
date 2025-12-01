@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dr. Jane Doe — Researcher</title>
+  <meta name="description" content="Jane Doe — PhD candidate in Computer Science. Research: machine learning for healthcare. CV and publications." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div>
+        <h1 class="name">Jane Doe</h1>
+        <p class="role">PhD Candidate — Machine Learning for Healthcare</p>
+      </div>
+      <nav class="top-links" aria-label="Primary">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="/cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <div class="about-grid">
+        <img src="/avatar.png" alt="Jane Doe" class="avatar" />
+        <div>
+          <h2>About</h2>
+          <p>Hello — I’m <strong>Jane Doe</strong>. My work focuses on interpretable ML for clinical decision support. I’m currently a PhD candidate at University X under Prof. Y.</p>
+          <p><strong>Location:</strong> Istanbul, Türkiye · <strong>Email:</strong> <a href="mailto:jane.doe@university.edu">jane.doe@university.edu</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="card">
+      <h2>Research</h2>
+      <p>Short paragraph summarizing your main research interests and any current project titles. Use 2–4 lines.</p>
+      <ul>
+        <li><strong>Project A:</strong> interpretable risk models for cardiology.</li>
+        <li><strong>Project B:</strong> domain adaptation for low-resource hospitals.</li>
+      </ul>
+    </section>
+
+    <section id="publications" class="card">
+      <h2>Selected Publications</h2>
+      <ol>
+        <li>Doe, J., &amp; Others. <em>Title of Paper</em>. Conference/Journal, 2024. <a href="#">PDF</a></li>
+        <li>Doe, J. <em>Another paper</em>. Journal, 2023. <a href="#">PDF</a></li>
+      </ol>
+      <p><a href="/publications.html">Full publications (BibTeX / downloadable)</a></p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>If you’d like to reach me about collaborations or applications, email <a href="mailto:jane.doe@university.edu">jane.doe@university.edu</a>. You can also link to your LinkedIn / Google Scholar / ORCID:</p>
+      <p>
+        <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> ·
+        <a href="https://orcid.org" target="_blank" rel="noopener">ORCID</a> ·
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Jane Doe — Maintained by Jane Doe. Built with GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
