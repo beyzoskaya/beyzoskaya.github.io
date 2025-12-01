@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dr. Jane Doe — Researcher</title>
-  <meta name="description" content="Jane Doe — PhD candidate in Computer Science. Research: machine learning for healthcare. CV and publications." />
+  <title>Beyza Kaya — MSc Student in AI & Bioinformatics</title>
+  <meta name="description" content="Beyza Kaya — MSc Artificial Intelligence student at Özyeğin University working on bioinformatics, computational biology, graph neural networks, and chromatin structure modeling." />
   <link rel="stylesheet" href="/styles.css" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-grid">
@@ -15,63 +16,114 @@
         <p class="role">MSc Student — Artificial Intelligence (Bioinformatics)</p>
       </div>
       <nav class="top-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
         <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="/cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
+
+    <!-- ABOUT -->
     <section id="about" class="card">
       <div class="about-grid">
-        <img src="/avatar.png" alt="Jane Doe" class="avatar" />
+        <img src="/beyza.png" alt="Beyza Kaya" class="avatar" />
         <div>
-          <h2>About</h2>
-          <p>Hello — I’m <strong>Jane Doe</strong>. My work focuses on interpretable ML for clinical decision support. I’m currently a PhD candidate at University X under Prof. Y.</p>
-          <p><strong>Location:</strong> Istanbul, Türkiye · <strong>Email:</strong> <a href="mailto:jane.doe@university.edu">jane.doe@university.edu</a></p>
+          <h2>About Me</h2>
+          <p>
+            I’m <strong>Beyza Kaya</strong>, a Master’s student in the Artificial Intelligence program at Özyeğin University.
+            My research focuses on <strong>bioinformatics, computational biology, and graph-based machine learning models</strong>.
+            I am particularly interested in how biological structures and interactions can be represented and modeled computationally using graph neural networks and featurized genomics data.
+          </p>
+
+          <p>
+            I previously completed a <strong>double major</strong> in <strong>Computer Science</strong> and
+            <strong>Industrial Engineering</strong> at Özyeğin University.
+          </p>
+
+          <p>
+            <strong>Location:</strong> Istanbul, Türkiye <br>
+            <strong>Email:</strong> <a href="mailto:YOUR-EMAIL-HERE">YOUR-EMAIL-HERE</a>
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- RESEARCH INTERESTS -->
     <section id="research" class="card">
-      <h2>Research</h2>
-      <p>Short paragraph summarizing your main research interests and any current project titles. Use 2–4 lines.</p>
+      <h2>Research Interests</h2>
+      <p>
+        My work lies at the intersection of <strong>bioinformatics, machine learning, chromatin architecture modeling, graph neural networks, and temporal gene expression analysis</strong>.
+      </p>
+
       <ul>
-        <li><strong>Project A:</strong> interpretable risk models for cardiology.</li>
-        <li><strong>Project B:</strong> domain adaptation for low-resource hospitals.</li>
+        <li>Graph-based representations of biological systems</li>
+        <li>Chromatin interactions and Hi-C data modeling</li>
+        <li>Multi-resolution genomic structure prediction</li>
+        <li>Spatio-temporal gene expression prediction</li>
+        <li>Integrating graph features with biological sequence analysis</li>
       </ul>
     </section>
 
-    <section id="publications" class="card">
-      <h2>Selected Publications</h2>
-      <ol>
-        <li>Doe, J., &amp; Others. <em>Title of Paper</em>. Conference/Journal, 2024. <a href="#">PDF</a></li>
-        <li>Doe, J. <em>Another paper</em>. Journal, 2023. <a href="#">PDF</a></li>
-      </ol>
-      <p><a href="/publications.html">Full publications (BibTeX / downloadable)</a></p>
+    <!-- PROJECTS -->
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+
+      <h3>1. GAT-HiC — Graph Attention Model for Chromatin Structure Prediction</h3>
+      <p>
+        In collaboration with my advisor <strong>Dr. Emre Sefer</strong>, I developed <strong>GAT-HiC</strong>, a graph attention–based model designed to
+        predict <strong>unseen chromatin structures</strong> from experimental Hi-C contact maps.  
+      </p>
+      <ul>
+        <li>Leverages graph attention networks (GATs) to model 3D chromatin organization</li>
+        <li>Generalizes across different <strong>resolutions, restriction enzymes, and species</strong></li>
+        <li>Captures structural dependencies using biologically informed graph features</li>
+        <li>Designed for cross-setting and cross-species prediction robustness</li>
+      </ul>
+
+      <h3>2. STEP — Spatio-Temporal Expression Prediction</h3>
+      <p>
+        I also developed <strong>STEP (Spatio-Temporal-Expression-Prediction)</strong>, which includes two versions:
+        <strong>STEPmr</strong> and <strong>STEPmi</strong>, targeting mRNA-specific and miRNA-specific gene sets.
+      </p>
+
+      <ul>
+        <li>Predicts gene expression values across different time points</li>
+        <li>Uses <strong>Hi-C–derived features</strong> combined with graph representations of interacting genes</li>
+        <li>Integrates temporal interactions from mRNA and miRNA time-series datasets</li>
+        <li>Captures dynamic relationships between chromatin structure and gene activity</li>
+      </ul>
+
+      <p>
+        Both projects aim to demonstrate how chromatin architecture and gene interaction graphs can be combined to
+        form powerful models for understanding the regulatory dynamics of the genome.
+      </p>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="card">
       <h2>Contact</h2>
-      <p>If you’d like to reach me about collaborations or applications, email <a href="mailto:jane.doe@university.edu">jane.doe@university.edu</a>. You can also link to your LinkedIn / Google Scholar / ORCID:</p>
       <p>
-        <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> ·
-        <a href="https://orcid.org" target="_blank" rel="noopener">ORCID</a> ·
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        For collaboration or academic inquiries, feel free to reach out via email:
+        <a href="mailto:YOUR-EMAIL-HERE">beyza.kaya@ozu.edu.tr</a>
+      </p>
+      <p>
+        You may also include additional links here: Google Scholar, LinkedIn, GitHub, ORCID, etc.
       </p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Jane Doe — Maintained by Jane Doe. Built with GitHub Pages.</p>
+      <p>© <span id="year"></span> Beyza Kaya — Built with GitHub Pages</p>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
