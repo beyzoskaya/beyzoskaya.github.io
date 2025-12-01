@@ -15,6 +15,7 @@ body{
   background:var(--bg);
   color:#111;
   line-height:1.5;
+  scroll-behavior: smooth; /* smooth scrolling */
 }
 
 .container{
@@ -36,7 +37,7 @@ body{
 
 .name{
   margin:0;
-  font-size:1.8rem; /* slightly bigger for a more professional impact */
+  font-size:1.8rem;
 }
 
 .role{
@@ -45,77 +46,68 @@ body{
   font-weight:500;
 }
 
-/* Top navigation links */
-.top-links a {
+.top-links a{
   margin-left:14px;
   text-decoration:none;
   color:var(--accent);
   font-weight:600;
-  position: relative;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s;
 }
 
-.top-links a::after {
-  content:'';
-  position:absolute;
-  width:0;
-  height:2px;
-  bottom:-2px;
-  left:0;
-  background-color:var(--accent);
-  transition: width 0.3s;
-}
-
-.top-links a:hover {
+.top-links a:hover{
   color:#0941cc;
+  transform: translateY(-2px); /* subtle hover lift */
 }
 
-.top-links a:hover::after {
-  width:100%;
+.btn{
+  padding:6px 14px;
+  border-radius:6px;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  text-decoration:none;
+  transition: all 0.3s;
 }
 
-/* CV button in the nav - consistent style */
-.top-links a.btn {
-  background: var(--accent);
-  color: #fff;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-weight:600;
-  transition: all 0.3s ease;
-}
-
-.top-links a.btn:hover {
-  background: #0e66ff; /* slightly lighter accent on hover */
-  transform: scale(1.05);
+.btn:hover{
+  background:var(--accent);
+  color:#fff;
 }
 
 .card{
   background:var(--card);
-  padding:24px; /* slightly more padding for a cleaner look */
+  padding:24px;
   border-radius:var(--radius);
   margin:24px 0;
-  box-shadow:0 2px 6px rgba(10,10,10,0.05); /* slightly stronger shadow for depth */
+  box-shadow:0 2px 6px rgba(10,10,10,0.05);
+  opacity: 0;            /* for fade-in */
+  transform: translateY(20px);  /* for fade-in */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about-grid{
   display:grid;
-  grid-template-columns:180px 1fr; /* bigger image */
+  grid-template-columns:180px 1fr;
   gap:24px;
   align-items:center;
 }
 
 .avatar{
-  width:180px;  /* increased size */
-  height:180px; /* increased size */
+  width:180px;
+  height:180px;
   border-radius:12px;
   object-fit:cover;
   background:#ddd;
-  box-shadow:0 4px 12px rgba(0,0,0,0.1); /* subtle shadow for a more polished look */
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
 
 .avatar:hover{
-  transform: scale(1.05); /* subtle hover zoom for interactivity */
+  transform: scale(1.05);
 }
 
 h2{
@@ -134,6 +126,32 @@ ol,ul{
   font-size:0.9rem;
 }
 
+/* Project figures */
+.project-figure {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 16px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  opacity: 0;            /* fade-in */
+  transform: translateY(20px); 
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.project-figure.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.figure-caption {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
 /* Responsive */
 @media (max-width:640px){
   .header-grid{
@@ -148,25 +166,7 @@ ol,ul{
     margin:8px 10px 0 0;
   }
   .avatar{
-    width:140px;  /* smaller on mobile */
+    width:140px;
     height:140px;
   }
-}
-
-/* Project figure styling */
-.project-figure {
-  width: 100%;           /* fits within card */
-  max-width: 700px;      /* not too large */
-  display: block;
-  margin: 16px auto;     /* center horizontally */
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.figure-caption {
-  font-size: 0.85rem;
-  color: #555;
-  text-align: center;
-  margin-bottom: 12px;
-  font-style: italic;
 }
