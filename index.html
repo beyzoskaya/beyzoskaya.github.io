@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-grid">
       <div>
@@ -16,43 +17,72 @@
         <p class="role">MSc Student — Artificial Intelligence (Bioinformatics)</p>
       </div>
       <nav class="top-links" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-      <a href="./cv.html" class="btn">CV</a>
-    </nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+        <a href="./cv.html" class="btn">CV</a>
+      </nav>
     </div>
   </header>
 
   <main class="container">
 
-    <!-- ABOUT -->
+    <!-- ABOUT ME -->
     <section id="about" class="card">
       <div class="about-grid">
         <img src="./beyza.jpg" alt="Beyza Kaya" class="avatar" />
-
         <div>
           <h2>About Me</h2>
           <p>
             I’m <strong>Beyza Kaya</strong>, a Master’s student in the Artificial Intelligence program at Özyeğin University,
-            specializing in <strong>bioinformatics and computational biology</strong>.
-            My research focuses on integrating <strong>graph neural networks</strong> with biological structures,
-            especially chromatin architecture and spatio-temporal gene expression patterns.
+            specializing in <strong>bioinformatics and computational biology</strong>.  
+            My research focuses on applying <strong>graph neural networks</strong> to biological structures,
+            particularly <strong>chromatin architecture</strong> and <strong>spatio-temporal gene expression patterns</strong>.
           </p>
-
           <p>
-            I previously completed a <strong>double major</strong> in <strong>Computer Science</strong> and
-            <strong>Industrial Engineering</strong> at Özyeğin University.
-            My current work is advised by <strong>Dr. Emre Sefer</strong>.
+            I work under the supervision of <strong>Dr. Emre Sefer</strong> and have completed projects exploring 
+            computational models of genome dynamics and temporal gene regulation.
           </p>
-
           <p>
             <strong>Location:</strong> Istanbul, Türkiye <br>
             <strong>Email:</strong> <a href="mailto:beyza.kaya@ozu.edu.tr">beyza.kaya@ozu.edu.tr</a>
           </p>
         </div>
       </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <ul>
+        <li>MSc Artificial Intelligence (Bioinformatics) — Özyeğin University</li>
+        <li>BSc Computer Science & Industrial Engineering (Double Major) — Özyeğin University</li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>Graph Neural Networks & AI for Bioinformatics</li>
+        <li>Computational Biology & Chromatin Modeling</li>
+        <li>Hi-C Data Analysis & Spatio-Temporal Genomics</li>
+        <li>Python, R, PyTorch, pandas, NumPy</li>
+      </ul>
+    </section>
+
+    <!-- FEATURED RESEARCH -->
+    <section id="featured" class="card">
+      <h2>Featured Research</h2>
+      <p>
+        <strong>GAT-HiC</strong>: Graph Attention Networks predicting unseen chromatin structures 
+        (<a href="https://ieeexplore.ieee.org/document/11250716" target="_blank">TCBB 2025</a>)<br>
+        <strong>STEP</strong>: Spatio-Temporal Expression Prediction using graph-based modeling 
+        (<a href="https://doi.org/10.1101/2025.10.07.678022" target="_blank">bioRxiv 2025</a>)
+      </p>
     </section>
 
     <!-- PROJECTS -->
@@ -64,10 +94,6 @@
         <strong>GAT-HiC</strong> is a graph-attention–based model that predicts <strong>unseen chromatin structures</strong>
         from Hi-C contact maps. Developed in collaboration with my advisor <strong>Dr. Emre Sefer</strong>.
       </p>
-      <p>
-        <strong>Publication:</strong> 
-        <a href="https://ieeexplore.ieee.org/document/11250716" target="_blank">IEEE Transactions on Computational Biology and Bioinformatics (TCBB)</a>
-      </p>
       <ul>
         <li>Leverages graph attention networks (GATs) to model 3D chromatin organization</li>
         <li>Generalizes across different resolutions, enzymes, and species</li>
@@ -77,11 +103,8 @@
 
       <h3>2. STEP — Spatio-Temporal Expression Prediction</h3>
       <p>
-        <strong>STEP (Spatio-Temporal Expression Prediction)</strong> consists of two models: STEPmr and STEPmi, designed for mRNA-specific and miRNA-specific gene sets.
-      </p>
-      <p>
-        <strong>Preprint:</strong> 
-        <a href="https://doi.org/10.1101/2025.10.07.678022" target="_blank">bioRxiv</a>
+        <strong>STEP (Spatio-Temporal Expression Prediction)</strong> consists of two models: STEPmr and STEPmi,
+        designed for mRNA-specific and miRNA-specific gene sets.
       </p>
       <ul>
         <li>Predicts gene expression levels across multiple time points</li>
@@ -123,6 +146,7 @@
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> Beyza Kaya — Built with GitHub Pages</p>
