@@ -86,44 +86,39 @@
     </section>
 
     <!-- PROJECTS -->
-  <section id="projects" class="card">
-    <h2>Projects</h2>
-  
-    <h3>1. GAT-HiC — Graph Attention Model for Chromatin Structure Prediction</h3>
-    <p>
-      <strong>GAT-HiC</strong> is a graph-attention–based model that predicts <strong>unseen chromatin structures</strong>
-      from Hi-C contact maps. Developed in collaboration with my advisor <strong>Dr. Emre Sefer</strong>.
-    </p>
-  
-    <!-- GAT-HiC figure -->
-    <img src="./HiC_pipeline_mae_loss.png" alt="GAT-HiC Model Architecture" class="project-figure">
-    <p class="figure-caption">Figure: GAT-HiC graph attention model architecture for chromatin structure prediction.</p>
-  
-    <ul>
-      <li>Leverages graph attention networks (GATs) to model 3D chromatin organization</li>
-      <li>Generalizes across different resolutions, enzymes, and species</li>
-      <li>Encodes biologically informed graph features derived from genomic regions</li>
-      <li>Designed to enable cross-setting and cross-species structural predictions</li>
-    </ul>
-  
-    <h3>2. STEP — Spatio-Temporal Expression Prediction</h3>
-    <p>
-      <strong>STEP (Spatio-Temporal Expression Prediction)</strong> consists of two models: STEPmr and STEPmi,
-      designed for mRNA-specific and miRNA-specific gene sets.
-    </p>
-  
-    <!-- STEP figure -->
-    <img src="./pipeline_overview_STEPmi_STEPmr.png" alt="STEP Model Architecture" class="project-figure">
-    <p class="figure-caption">Figure: STEP architecture overview showing integration of mRNA and miRNA time-series with Hi-C features.</p>
-  
-    <ul>
-      <li>Predicts gene expression levels across multiple time points</li>
-      <li>Incorporates Hi-C–derived features and graph representations of interacting genes</li>
-      <li>Models dynamic mRNA/miRNA regulatory interactions over time</li>
-      <li>Integrates chromatin structure with temporal expression data</li>
-    </ul>
-  </section>
+    <section id="projects" class="card">
+      <h2>Projects</h2>
 
+      <h3>1. GAT-HiC — Graph Attention Model for Chromatin Structure Prediction</h3>
+      <p>
+        <strong>GAT-HiC</strong> is a graph-attention–based model that predicts <strong>unseen chromatin structures</strong>
+        from Hi-C contact maps. Developed in collaboration with my advisor <strong>Dr. Emre Sefer</strong>.
+      </p>
+      <!-- GAT-HiC figure -->
+      <img src="./HiC_pipeline_mae_loss.png" alt="GAT-HiC Model Architecture" class="project-figure">
+      <p class="figure-caption">Figure: GAT-HiC graph attention model architecture for chromatin structure prediction.</p>
+      <ul>
+        <li>Leverages graph attention networks (GATs) to model 3D chromatin organization</li>
+        <li>Generalizes across different resolutions, enzymes, and species</li>
+        <li>Encodes biologically informed graph features derived from genomic regions</li>
+        <li>Designed to enable cross-setting and cross-species structural predictions</li>
+      </ul>
+
+      <h3>2. STEP — Spatio-Temporal Expression Prediction</h3>
+      <p>
+        <strong>STEP (Spatio-Temporal Expression Prediction)</strong> consists of two models: STEPmr and STEPmi,
+        designed for mRNA-specific and miRNA-specific gene sets.
+      </p>
+      <!-- STEP figure -->
+      <img src="./pipeline_overview_STEPmi_STEPmr.png" alt="STEP Model Architecture" class="project-figure">
+      <p class="figure-caption">Figure: STEP architecture overview showing integration of mRNA and miRNA time-series with Hi-C features.</p>
+      <ul>
+        <li>Predicts gene expression levels across multiple time points</li>
+        <li>Incorporates Hi-C–derived features and graph representations of interacting genes</li>
+        <li>Models dynamic mRNA/miRNA regulatory interactions over time</li>
+        <li>Integrates chromatin structure with temporal expression data</li>
+      </ul>
+    </section>
 
     <!-- PUBLICATIONS -->
     <section id="publications" class="card">
@@ -166,6 +161,18 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.card, .project-figure');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(fader => observer.observe(fader));
   </script>
 
 </body>
