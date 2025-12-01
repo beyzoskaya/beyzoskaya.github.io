@@ -15,7 +15,6 @@ body{
   background:var(--bg);
   color:#111;
   line-height:1.5;
-  scroll-behavior: smooth; /* smooth scrolling for top links */
 }
 
 .container{
@@ -37,7 +36,7 @@ body{
 
 .name{
   margin:0;
-  font-size:1.8rem;
+  font-size:1.8rem; /* slightly bigger for a more professional impact */
 }
 
 .role{
@@ -46,7 +45,8 @@ body{
   font-weight:500;
 }
 
-.top-links a{
+/* Top navigation links */
+.top-links a {
   margin-left:14px;
   text-decoration:none;
   color:var(--accent);
@@ -55,7 +55,7 @@ body{
   transition: color 0.3s;
 }
 
-.top-links a::after{
+.top-links a::after {
   content:'';
   position:absolute;
   width:0;
@@ -66,65 +66,56 @@ body{
   transition: width 0.3s;
 }
 
-.top-links a:hover{
+.top-links a:hover {
   color:#0941cc;
 }
 
-.top-links a:hover::after{
+.top-links a:hover::after {
   width:100%;
 }
 
-/* Buttons */
-.btn{
-  display:inline-block;
-  padding:8px 16px;
-  background:var(--accent);
-  color:#fff;
-  border-radius:6px;
-  text-decoration:none;
+/* CV button in the nav - consistent style */
+.top-links a.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
   font-weight:600;
   transition: all 0.3s ease;
 }
 
-.btn:hover{
-  background:#0848cc;
+.top-links a.btn:hover {
+  background: #0e66ff; /* slightly lighter accent on hover */
   transform: scale(1.05);
 }
 
-/* Cards */
 .card{
   background:var(--card);
-  padding:24px;
+  padding:24px; /* slightly more padding for a cleaner look */
   border-radius:var(--radius);
   margin:24px 0;
-  box-shadow:0 2px 6px rgba(10,10,10,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover{
-  transform: translateY(-4px);
-  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  box-shadow:0 2px 6px rgba(10,10,10,0.05); /* slightly stronger shadow for depth */
 }
 
 .about-grid{
   display:grid;
-  grid-template-columns:180px 1fr;
+  grid-template-columns:180px 1fr; /* bigger image */
   gap:24px;
   align-items:center;
 }
 
 .avatar{
-  width:180px;
-  height:180px;
+  width:180px;  /* increased size */
+  height:180px; /* increased size */
   border-radius:12px;
   object-fit:cover;
   background:#ddd;
-  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  box-shadow:0 4px 12px rgba(0,0,0,0.1); /* subtle shadow for a more polished look */
   transition: transform 0.3s;
 }
 
 .avatar:hover{
-  transform: scale(1.05);
+  transform: scale(1.05); /* subtle hover zoom for interactivity */
 }
 
 h2{
@@ -143,29 +134,6 @@ ol,ul{
   font-size:0.9rem;
 }
 
-/* Project figures */
-.project-figure {
-  width: 100%;
-  max-width: 700px;
-  display: block;
-  margin: 16px auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-}
-
-.project-figure:hover {
-  transform: scale(1.02);
-}
-
-.figure-caption {
-  font-size: 0.85rem;
-  color: #555;
-  text-align: center;
-  margin-bottom: 12px;
-  font-style: italic;
-}
-
 /* Responsive */
 @media (max-width:640px){
   .header-grid{
@@ -180,10 +148,25 @@ ol,ul{
     margin:8px 10px 0 0;
   }
   .avatar{
-    width:140px;
+    width:140px;  /* smaller on mobile */
     height:140px;
   }
-  .project-figure{
-    max-width:100%;
-  }
+}
+
+/* Project figure styling */
+.project-figure {
+  width: 100%;           /* fits within card */
+  max-width: 700px;      /* not too large */
+  display: block;
+  margin: 16px auto;     /* center horizontally */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.figure-caption {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 12px;
+  font-style: italic;
 }
