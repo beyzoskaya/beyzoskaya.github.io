@@ -119,6 +119,30 @@
         <li>Models dynamic mRNA/miRNA regulatory interactions over time</li>
         <li>Integrates chromatin structure with temporal expression data</li>
       </ul>
+
+      <h3>3. PGMTL — Multi-Task Protein Language Modeling (Ongoing)</h3>
+<p>
+  <strong>PGMTL</strong> is an ongoing research project aiming to design a
+  <strong>generalized multi-task learning framework</strong> for protein sequence modeling.
+  The core idea is to leverage a <strong>shared ProtBERT encoder</strong> to jointly learn
+  multiple biologically relevant downstream tasks through structured task conditioning.
+</p>
+
+<!-- PGMTL figure -->
+<img src="./ProteinGLM_related_tasks.png" alt="PGMTL Multi-Task Protein Language Model Framework" class="project-figure">
+<p class="figure-caption">
+  Figure: PGMTL framework illustrating a shared ProtBERT encoder with task-specific heads and
+  semantic prompting for multi-task biological prediction.
+</p>
+
+<ul>
+  <li>Uses <strong>ProtBERT</strong> as a shared encoder with <strong>LoRA-based adaptation</strong> for parameter-efficient fine-tuning</li>
+  <li>Investigates <strong>semantic prompting</strong> to condition the model on task identity and biological context</li>
+  <li>Compares multiple <strong>multi-task optimization strategies</strong>, including uncertainty weighting, PCGrad, DWA, curriculum learning, and naive joint training</li>
+  <li>Analyzes trade-offs, gradient conflicts, and representation sharing across related protein prediction tasks</li>
+  <li><em>Status:</em> In progress — primary current research focus</li>
+</ul>
+
     </section>
 
     <!-- PUBLICATIONS -->
