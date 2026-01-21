@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Beyza Kaya — Technical Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      gap: 20px;
+    }
+
+    iframe {
+      width: 80%;
+      height: 90vh;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0941cc;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div>
+        <h1 class="name">Beyza Kaya — Technical Portfolio</h1>
+      </div>
+      <nav class="top-links" aria-label="Primary">
+        <a href="./index.html">Home</a>
+        <a href="./cv.html">CV</a>
+        <a href="./portfolio.html">Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <iframe src="./Technical_Portfolio_Beyza_new.pdf"></iframe>
+    <a href="./Technical_Portfolio_Beyza_new.pdf" target="_blank" class="btn">
+      Download Technical Portfolio
+    </a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Beyza Kaya — Built with GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
