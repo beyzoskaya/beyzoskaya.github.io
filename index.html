@@ -114,7 +114,101 @@
     <section id="projects" class="card">
       <h2>Projects</h2>
 
-      <h3>1. GAT-HiC — Graph Attention Model for Chromatin Structure Prediction</h3>
+      <!-- Project 1: PhD Research -->
+  <h3>1. How Much Does an LLM Know? — Sampling Hidden Knowledge Like an Ecologist</h3>
+
+  <p>
+    <strong>PhD Research Project | IDEAS, HZDR & ScaDS.AI, TU Dresden (2026–Present)</strong>
+  </p>
+
+  <p>
+    <strong>Researchers:</strong> Hatice Beyza Kaya, Justin Calabrese, Simon Razniewski
+  </p>
+
+  <p>
+    Large language models (LLMs) can answer questions about many different
+    domains, but how much do they actually know? Existing benchmarks evaluate
+    whether a model answers specific questions correctly, but they do not
+    reveal how much knowledge a model contains about an entire domain.
+  </p>
+
+  <p>
+    Inspired by ecological biodiversity estimation, this project investigates
+    how sampling methods can be used to estimate the hidden knowledge of LLMs.
+    Just as ecologists sample a community to estimate how many species remain
+    undiscovered, we treat each elicited LLM answer as a sample and each
+    distinct valid entity as a species.
+  </p>
+
+  <!-- PhD analogy figure -->
+  <img src="./analogy.png"
+       alt="Ecological sampling analogy for estimating hidden knowledge in large language models"
+       class="project-figure">
+
+  <p class="figure-caption">
+    Figure: Analogy between ecological biodiversity sampling and
+    sampling-based estimation of hidden knowledge in large language models.
+  </p>
+
+  <p><strong>Approach</strong></p>
+
+  <ul>
+    <li>
+      Treat each elicited LLM answer as a sampling event and each distinct
+      valid entity as an observed species.
+    </li>
+    <li>
+      Construct fixed reference universes for specific domains, such as
+      5,295 living mammal species from Wikidata, to evaluate the completeness
+      of retrieved knowledge.
+    </li>
+    <li>
+      Analyze entity accumulation curves, singletons and doubletons to
+      understand how much knowledge remains unseen.
+    </li>
+    <li>
+      Apply ecological richness estimators, including Chao1, to estimate
+      the number of entities that may remain undiscovered.
+    </li>
+  </ul>
+
+  <p><strong>Two Research Phases</strong></p>
+
+  <ul>
+    <li>
+      <strong>Elicitation:</strong> Investigating how different prompting
+      strategies affect the knowledge observed in LLM outputs, including
+      independent requests, batch requests, different prompt phrasings
+      and prompt templates.
+    </li>
+    <li>
+      <strong>Estimation:</strong> Evaluating richness estimators using
+      simulated communities with known distributions and comparing observed
+      richness, estimated richness and the size of the reference universe.
+    </li>
+  </ul>
+
+  <p><strong>First Results and Research Contributions</strong></p>
+
+  <ul>
+    <li>
+      Initial experiments reveal that LLMs repeatedly retrieve a common core
+      of well-known entities, while completeness against the fixed reference
+      universe remains low.
+    </li>
+    <li>
+      High sample coverage alongside low completeness highlights the
+      distinction between repeatedly retrieving known entities and
+      discovering the full domain.
+    </li>
+    <li>
+      The project aims to establish a sampling framework for measuring
+      LLM knowledge under specified configurations and identifying
+      which richness estimators are reliable for different elicitation designs.
+    </li>
+  </ul>
+
+      <h3>2. GAT-HiC — Graph Attention Model for Chromatin Structure Prediction</h3>
       <p>
         <strong>GAT-HiC</strong> is a graph-attention–based model that predicts <strong>unseen chromatin structures</strong>
         from Hi-C contact maps. Developed in collaboration with my advisor <strong>Dr. Emre Sefer</strong>.
@@ -129,7 +223,7 @@
         <li>Designed to enable cross-setting and cross-species structural predictions</li>
       </ul>
 
-      <h3>2. STEP — Spatio-Temporal Expression Prediction</h3>
+      <h3>3. STEP — Spatio-Temporal Expression Prediction</h3>
       <p>
         <strong>STEP (Spatio-Temporal Expression Prediction)</strong> consists of two models: STEPmr and STEPmi,
         designed for mRNA-specific and miRNA-specific gene sets.
@@ -144,7 +238,7 @@
         <li>Integrates chromatin structure with temporal expression data</li>
       </ul>
 
-      <h3>3. PGMTL — Multi-Task Protein Language Modeling (Ongoing)</h3>
+      <h3>4. PGMTL — Multi-Task Protein Language Modeling (Ongoing)</h3>
 <p>
   <strong>PGMTL</strong> is an ongoing research project aiming to design a
   <strong>generalized multi-task learning framework</strong> for protein sequence modeling.
