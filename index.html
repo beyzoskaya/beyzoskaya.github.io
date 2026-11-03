@@ -325,21 +325,26 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Fade-in on scroll
-    const faders = document.querySelectorAll('.card, .project-figure');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
+  // Fade-in on scroll
+  const faders = document.querySelectorAll('.card, .project-figure');
 
-    faders.forEach(fader => observer.observe(fader));
-  </script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.05
+  });
+
+  faders.forEach(fader => observer.observe(fader));
+</script>
 
 </body>
 </html>
