@@ -111,10 +111,11 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="card">
-      <h2>Projects</h2>
+    
+<section id="projects" class="card">
+  <h2>Projects</h2>
 
-      <!-- Project 1: PhD Research -->
+  <!-- Project 1: PhD Research -->
   <h3>1. How Much Does an LLM Know? — Sampling Hidden Knowledge Like an Ecologist</h3>
 
   <p>
@@ -208,60 +209,82 @@
     </li>
   </ul>
 
-      <h3>2. GAT-HiC — Graph Attention Model for Chromatin Structure Prediction</h3>
-      <p>
-        <strong>GAT-HiC</strong> is a graph-attention–based model that predicts <strong>unseen chromatin structures</strong>
-        from Hi-C contact maps. Developed in collaboration with my advisor <strong>Dr. Emre Sefer</strong>.
-      </p>
-      <!-- GAT-HiC figure -->
-      <img src="./HiC_pipeline_mae_loss.png" alt="GAT-HiC Model Architecture" class="project-figure">
-      <p class="figure-caption">Figure: GAT-HiC graph attention model architecture for chromatin structure prediction.</p>
-      <ul>
-        <li>Leverages graph attention networks (GATs) to model 3D chromatin organization</li>
-        <li>Generalizes across different resolutions, enzymes, and species</li>
-        <li>Encodes biologically informed graph features derived from genomic regions</li>
-        <li>Designed to enable cross-setting and cross-species structural predictions</li>
-      </ul>
+  <!-- Project 2: GAT-HiC -->
+  <h3>2. GAT-HiC — Graph Attention Model for Chromatin Structure Prediction</h3>
 
-      <h3>3. STEP — Spatio-Temporal Expression Prediction</h3>
-      <p>
-        <strong>STEP (Spatio-Temporal Expression Prediction)</strong> consists of two models: STEPmr and STEPmi,
-        designed for mRNA-specific and miRNA-specific gene sets.
-      </p>
-      <!-- STEP figure -->
-      <img src="./pipeline_overview_STEPmi_STEPmr.png" alt="STEP Model Architecture" class="project-figure">
-      <p class="figure-caption">Figure: STEP architecture overview showing integration of mRNA and miRNA time-series with Hi-C features.</p>
-      <ul>
-        <li>Predicts gene expression levels across multiple time points</li>
-        <li>Incorporates Hi-C–derived features and graph representations of interacting genes</li>
-        <li>Models dynamic mRNA/miRNA regulatory interactions over time</li>
-        <li>Integrates chromatin structure with temporal expression data</li>
-      </ul>
+  <p>
+    <strong>GAT-HiC</strong> is a graph-attention–based model that predicts
+    <strong>unseen chromatin structures</strong> from Hi-C contact maps.
+    Developed in collaboration with my advisor <strong>Dr. Emre Sefer</strong>.
+  </p>
 
-      <h3>4. PGMTL — Multi-Task Protein Language Modeling (Ongoing)</h3>
-<p>
-  <strong>PGMTL</strong> is an ongoing research project aiming to design a
-  <strong>generalized multi-task learning framework</strong> for protein sequence modeling.
-  The core idea is to leverage a <strong>shared ProtBERT encoder</strong> to jointly learn
-  multiple biologically relevant downstream tasks through structured task conditioning.
-</p>
+  <img src="./HiC_pipeline_mae_loss.png"
+       alt="GAT-HiC Model Architecture" class="project-figure">
 
-<!-- PGMTL figure -->
-<img src="./ProteinGLM_related_tasks.png" alt="PGMTL Multi-Task Protein Language Model Framework" class="project-figure">
-<p class="figure-caption">
-  Figure: PGMTL framework illustrating a shared ProtBERT encoder with task-specific heads and
-  semantic prompting for multi-task biological prediction.
-</p>
+  <p class="figure-caption">
+    Figure: GAT-HiC graph attention model architecture for chromatin structure prediction.
+  </p>
 
-<ul>
-  <li>Uses <strong>ProtBERT</strong> as a shared encoder with <strong>LoRA-based adaptation</strong> for parameter-efficient fine-tuning</li>
-  <li>Investigates <strong>semantic prompting</strong> to condition the model on task identity and biological context</li>
-  <li>Compares multiple <strong>multi-task optimization strategies</strong>, including uncertainty weighting, PCGrad, DWA, curriculum learning, and naive joint training</li>
-  <li>Analyzes trade-offs, gradient conflicts, and representation sharing across related protein prediction tasks</li>
-  <li><em>Status:</em> In progress — primary current research focus</li>
-</ul>
+  <ul>
+    <li>Leverages graph attention networks (GATs) to model 3D chromatin organization</li>
+    <li>Generalizes across different resolutions, enzymes, and species</li>
+    <li>Encodes biologically informed graph features derived from genomic regions</li>
+    <li>Designed to enable cross-setting and cross-species structural predictions</li>
+  </ul>
 
-    </section>
+  <!-- Project 3: STEP -->
+  <h3>3. STEP — Spatio-Temporal Expression Prediction</h3>
+
+  <p>
+    <strong>STEP (Spatio-Temporal Expression Prediction)</strong> consists
+    of two models: STEPmr and STEPmi, designed for mRNA-specific and
+    miRNA-specific gene sets.
+  </p>
+
+  <img src="./pipeline_overview_STEPmi_STEPmr.png"
+       alt="STEP Model Architecture" class="project-figure">
+
+  <p class="figure-caption">
+    Figure: STEP architecture overview showing integration of mRNA and
+    miRNA time-series with Hi-C features.
+  </p>
+
+  <ul>
+    <li>Predicts gene expression levels across multiple time points</li>
+    <li>Incorporates Hi-C-derived features and graph representations of interacting genes</li>
+    <li>Models dynamic mRNA/miRNA regulatory interactions over time</li>
+    <li>Integrates chromatin structure with temporal expression data</li>
+  </ul>
+
+  <!-- Project 4: PGMTL -->
+  <h3>4. PGMTL — Multi-Task Protein Language Modeling (Ongoing)</h3>
+
+  <p>
+    <strong>PGMTL</strong> is an ongoing research project aiming to design a
+    <strong>generalized multi-task learning framework</strong> for protein
+    sequence modeling. The core idea is to leverage a
+    <strong>shared ProtBERT encoder</strong> to jointly learn multiple
+    biologically relevant downstream tasks through structured task conditioning.
+  </p>
+
+  <img src="./ProteinGLM_related_tasks.png"
+       alt="PGMTL Multi-Task Protein Language Model Framework"
+       class="project-figure">
+
+  <p class="figure-caption">
+    Figure: PGMTL framework illustrating a shared ProtBERT encoder with
+    task-specific heads and semantic prompting for multi-task biological prediction.
+  </p>
+
+  <ul>
+    <li>Uses <strong>ProtBERT</strong> as a shared encoder with <strong>LoRA-based adaptation</strong> for parameter-efficient fine-tuning</li>
+    <li>Investigates <strong>semantic prompting</strong> to condition the model on task identity and biological context</li>
+    <li>Compares multiple <strong>multi-task optimization strategies</strong>, including uncertainty weighting, PCGrad, DWA, curriculum learning, and naive joint training</li>
+    <li>Analyzes trade-offs, gradient conflicts, and representation sharing across related protein prediction tasks</li>
+    <li><em>Status:</em> In progress</li>
+  </ul>
+
+</section>
 
     <!-- PUBLICATIONS -->
     <section id="publications" class="card">
